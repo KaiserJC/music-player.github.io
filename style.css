@@ -214,6 +214,10 @@
         border-radius: 15px;
     }
 
+     .img-container img {
+       height: 120px;
+       width: 120px;
+   }
     .trivia {
         margin-top:5px;
     }
