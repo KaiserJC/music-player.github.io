@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Musicana</title>
+  </head>
+  <body>
+    <h1 class="appName">MUSIC<span>ANA</span></h1>
+    <div class="music-card">
+      <div class="cover-info">
+        <div class="img-container">
+          <img
+            src="images/Bittersweet Symphony.jpg"
+            alt="music cover"
+            id="cover"
+          />
+        </div>
+
+        <div class="song-info">
+          <h1 id="title">Bittersweet Symphony</h1>
+          <h2 id="singer">The Verve</h2>
+        </div>
+        <div class="progress-container p1">
+          <div class="progress"></div>
+      </div>
+
+      <div class="navigation p1">
+        <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+            <i class="fas fa-forward"></i>
+        </button>
+      </div>
+      </div>
+
+      <div class="trivia-controls">
+        <div class="trivia">
+          <h1>About Song</h1>
+          <h3 id="song-trivia">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi
+            perspiciatis quaerat mollitia, eaque facere id odit quae aspernatur
+            saepe eum labore asperiores pariatur quos officiis? Repellendus ad
+            animi provident velit.
+          </h3>
+        </div>
+
+        <audio src="music/Bittersweet Symphony.mp3" id="audio"></audio>
+
+        <div class="progress-container p2">
+          <div class="progress"></div>
+      </div>
+
+      <div class="navigation p2">
+        <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+            <i class="fas fa-forward"></i>
+        </button>
+      </div>
+
+      </div>
+    </div>
+
+    <div class="copyright">
+      <h1>Developed By Arpit Choudhary</h1>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

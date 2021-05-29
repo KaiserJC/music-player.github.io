@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+    color: white;
+  }
+
+  img {
+      height: 200px;
+      width: 200px;
+  }
+
+  body {
+    height: 100vh;
+    margin: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    background: rgb(27, 27, 27);
+  }
+  
+  .appName{
+    font-size: 5rem;
+    margin-top: 4rem;
+    animation: heading 1s linear;
+    color: red;
+    font-family: 'ZCOOL KuaiLe', cursive, sans-serif;
+    text-align: center;
+  }
+
+  span{
+    animation: heading 1s linear ;
+    color: green;
+}
+
+@keyframes heading {
+    from {
+        margin-left: -20rem;
+        transform: rotate(0deg);    
+    }
+    to{
+        margin-left: 0;
+        transform: rotate(360deg);    
+
+    }
+}
+
+.music-card {
+    width: 70vw;
+    max-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    box-shadow:0 20px 20px 20px rgba(102, 100, 100, 0.6);
+    border-radius: 15px;
+}
+
+.cover-info {
+    background: rgb(39, 38, 38);
+    border-radius: 15px 0 0 15px;
+    padding: 20px;
+    
+}
+
+.img-container img {
+    border-radius: 50%;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+}
+
+.music-card.play .img-container img{
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from{
+          transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.song-info{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#title {
+    font-size: 1.7rem;
+    
+}
+
+#singer {
+    font-size: 1.1rem;
+    color: rgb(167, 163, 163);
+}
+
+.trivia-controls {
+    padding: 20px;
+}
+
+.trivia {
+    margin-bottom: 4rem;
+    margin-top: -2rem;
+    text-align: center;
+    height: 10rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.trivia h1{
+    font-size: 2.2rem;
+}
+
+.trivia h3 {
+   font-family: cursive;
+   font-weight: lighter;
+}
+
+.progress-container {
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom:2rem;
+    margin-top: -1rem;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: red;
+    border-radius: 5px;
+    height: 100%;
+    width: 0;
+    transition: width 0.1s linear;
+}
+
+.navigation {
+    text-align: center;
+}
+
+.action-btn {
+    background-color: rgb(27, 27, 27);
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: auto 30px;
+
+}
+
+.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+}
+.action-btn:focus {
+    outline: 0;
+}
+
+.copyright {
+    bottom: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif, cursive, sans-serif;
+    font-style: italic;
+}
+
+.p1{
+    display: none;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1200px) {
+
+   .trivia h1{
+    font-size: 1.8rem;
+}
+
+.trivia h3 {
+    font-size: 1rem;
+   font-family: cursive;
+   font-weight: lighter;
+}
+
+}
+
+@media screen and (max-width: 950px) {
+
+    .trivia h1{
+     font-size: 1.4rem;
+ }
+ 
+ .trivia h3 {
+     font-size: 0.9rem;
+    font-family: cursive;
+    font-weight: lighter;
+ }
+#title{
+    font-size: 1.5rem;
+}
+
+ .appName{
+     font-size: 4rem;
+ }
+ .copyright {
+    bottom: 1.5rem;    
+   font-size: 0.8rem;
+}
+ 
+ }
+
+ @media screen and (max-width: 850px) {
+
+    .cover-info{
+        margin: 10px;
+        border-radius: 15px;
+    }
+
+    .trivia {
+        margin-top:5px;
+    }
+    .trivia h1{
+        font-size: 1.2rem;
+    }
+    
+    .trivia h3 {
+        font-size: 0.9rem;
+       font-family: cursive;
+       font-weight: lighter;
+    }
+   #title{
+       font-size: 1.3rem;
+   }
+   #singer {
+       font-size: 1rem;
+   }
+   
+    .appName{
+        font-size: 3rem;
+    }
+    .copyright {
+       bottom: 1.5rem;    
+      font-size: 0.6rem;
+   }
+   .progress-container {
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top:1rem;
+    height: 4px;
+    width: 100%;
+}
+
+  .action-btn {
+      font-size: 20px;
+      margin: auto 10px;
+  }
+
+ }
+
+ @media screen and (max-width: 780px) {
+
+   .p1{
+       display: block;
+   }
+   .p2{
+       display: none;
+   }
+
+   .trivia{
+       margin-top:-120px ;
+   }
+   .action-btn {
+    background: rgb(39, 38, 38);
+
+}
+
+ }
+
+ @media screen and (max-width: 650px) {
+
+
+    .cover-info {
+        text-align: center;
+    }
+    .cover-info img{
+      height: 100px;
+      width: 100px;
+    }
+
+    #title{
+        font-size: 1.1rem;
+    }
+    #singer {
+        font-size: 0.8rem;
+    }
+    
+     .appName{
+         margin-top:20px;
+         font-size: 2.5rem;
+     }
+     .copyright {
+        bottom: 1.5rem;    
+       font-size: 0.6rem;
+    }
+
+   .trivia {
+       margin-bottom: -30px;
+   }
+
+   .trivia h1{
+    font-size: 1rem;
+}
+
+.trivia h3 {
+    font-size: 0.8rem;
+   font-family: cursive;
+   font-weight: lighter;
+}
+
+ }
