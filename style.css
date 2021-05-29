@@ -164,9 +164,7 @@
     font-style: italic;
 }
 
-.p1{
-    display: none;
-}
+
 
 /* Responsive */
 
@@ -260,18 +258,14 @@
 
  @media screen and (max-width: 780px) {
 
-   .p1{
-       display: block;
-   }
-   .p2{
-       display: none;
-   }
-
+  
    .trivia{
        margin-top:-120px ;
+       display: none;
    }
    .action-btn {
-    background: rgb(39, 38, 38);
+    background: rgb(27, 27, 27);
+    font-size: 0.9rem;
 
 }
 
@@ -318,4 +312,12 @@
    font-weight: lighter;
 }
 
+ }
+
+ @media screen and (max-width: 550px){
+    .action-btn {
+        background: rgb(27, 27, 27);
+        font-size: 0.6rem;
+    
+    }
  }
