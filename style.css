@@ -45,7 +45,7 @@
 
 .music-card {
     width: 90vw;
-    height: 70vh;
+    /* height: 70vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -284,10 +284,12 @@
     .music-card{
         display: block;
     }
-
-    .trivia{
-        display: none;
+    .trivia-controls {
+        display: flex;
+        flex-direction: column-reverse;
     }
+
+    
 
     #title{
         font-size: 1.1rem;
@@ -305,9 +307,10 @@
        font-size: 0.6rem;
     }
 
-   /* .trivia {
-       margin-bottom: -30px;
-   } */
+    .trivia {
+       margin-bottom: 1rem;
+       margin-top:1rem ;
+   } 
 
    .trivia h1{
     font-size: 1rem;
