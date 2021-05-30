@@ -20,28 +20,31 @@
   .appName{
     font-size: 5rem;
     margin-top: 4rem;
-    animation: heading 1s linear;
     color: red;
     font-family: 'ZCOOL KuaiLe', cursive, sans-serif;
     text-align: center;
   }
 
+  .beats{
+    animation: scale 1s linear infinite;
+
+  }
+  @keyframes scale {
+    from {
+        transform: scale(1.1);   
+    }
+    to{
+        transform: scale(1);   
+
+    }
+}
+
+
   span{
-    animation: heading 1s linear ;
+
     color: green;
 }
 
-@keyframes heading {
-    from {
-        margin-left: -20rem;
-        transform: rotate(0deg);    
-    }
-    to{
-        margin-left: 0;
-        transform: rotate(360deg);    
-
-    }
-}
 
 .music-card {
     width: 90vw;
@@ -221,7 +224,7 @@
     }
     
     .trivia h3 {
-        font-size: 0.9rem;
+        font-size: 1rem;
        font-family: cursive;
        font-weight: lighter;
     }
@@ -317,7 +320,6 @@
 }
 
 .trivia h3 {
-    font-size: 0.8rem;
    font-family: cursive;
    font-weight: lighter;
 }

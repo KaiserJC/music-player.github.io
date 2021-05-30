@@ -9,6 +9,7 @@ const title = document.querySelector("#title");
 const cover = document.querySelector("#cover");
 const songTrivia = document.querySelector("#song-trivia");
 const singer = document.querySelector("#singer");
+const headName = document.querySelector('.appName');
 
 // Song Titles
 const songs = [
@@ -19,6 +20,7 @@ const songs = [
   "Not Afraid",
   "Sugar",
   "Unbreakable",
+  "Dirty Paws","Ordinary Love","Ophelia","Liar Liar"
 ];
 
 // song trivia
@@ -30,6 +32,10 @@ const trivia = [
   "'Not Afraid' is a song by American rapper Eminem from his seventh studio album Recovery (2010). It was released as the album's lead single on April 29, 2010, by Interscope Records. 'Not Afraid' was first revealed as a single by Eminem via Twitter, after which the song debuted on radio.",
   "'Sugar' is a song by German DJ and record producer Robin Schulz. It features the vocals from Canadian singer Francesco Yates. The song was released in Germany on 17 July 2015 as the second single from his second studio album of the same name.",
   "'Unbreakable' is an official soundtrack from 2000 American superhero thriller film 'Unbreakable' written, produced, and directed by M. Night Shyamalan, and starring Bruce Willis, Samuel L. Jackson, Robin Wright Penn, Spencer Treat Clark, and Charlayne Woodard. ",
+  "'Dirty Paws' is a song written and recorded by Icelandic band Of Monsters and Men for their debut studio album, My Head Is an Animal. It is the opening track and the title of the album comes from a line in the song, and was released as its second single in April 2012 .",
+  "'Ordinary Love' is a song by Irish rock band U2. It was written to honour Nelson Mandela and is included in the biography film Mandela: Long Walk to Freedom. The song received a limited 10-inch vinyl release on Record Store Day on 29 November 2013, less than a week before Mandela died.",
+  "'Ophelia' is a song recorded by American folk rock band the Lumineers. It was released as the lead single from their sophomore album, Cleopatra on February 5, 2016.As of May 2021, the song has garnered over 595 million streams on Spotify.",
+  "Liar Liar is a song from the album True: Avicii By Avicii which is sung by Avicii .True is the debut studio album by Swedish electronic music producer Avicii, released on 13 September 2013 by PRMD Music and Island Records."
 ];
 
 // singer
@@ -40,7 +46,7 @@ const singers = [
   "The Verve",
   "Eminem",
   "Robin Schulz",
-  "James Newton",
+  "James Newton","O.M.A.M","U2","The Lumineers","Avicii"
 ];
 
 // keep track of songs
@@ -62,7 +68,8 @@ function playSong() {
   musicCard.classList.add("play");
   playBtn.querySelector("i.fas").classList.remove("fa-play");
   playBtn.querySelector("i.fas").classList.add("fa-pause");
-
+  headName.classList.add("beats");
+  
   audio.play();
 }
 
@@ -70,6 +77,7 @@ function pauseSong() {
   musicCard.classList.remove("play");
   playBtn.querySelector("i.fas").classList.remove("fa-pause");
   playBtn.querySelector("i.fas").classList.add("fa-play");
+  headName.classList.remove("beats");
 
   audio.pause();
 }
