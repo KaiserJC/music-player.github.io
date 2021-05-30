@@ -15,6 +15,7 @@
    align-items: center;
    justify-content: center;
     background: rgb(27, 27, 27);
+    position: relative;
   }
   
   .appName{
@@ -74,9 +75,7 @@
     animation-play-state: running;
 }
 
-.copyright {
-    display: none;
-}
+
 
 @keyframes rotate {
     from{
@@ -175,9 +174,10 @@
 }
 
 .copyright {
-    bottom: 1.5rem;
+    position: absolute;
+    bottom:-10rem;
+    font-size: 0.9rem;
     font-family: Arial, Helvetica, sans-serif, cursive, sans-serif;
-    font-style: italic;
 }
 
 
@@ -216,8 +216,7 @@
  .appName{
      font-size: 4rem;
  }
- .copyright {
-    bottom: 1.5rem;    
+ .copyright {    
    font-size: 0.8rem;
 }
  
@@ -257,8 +256,7 @@
     .appName{
         font-size: 3rem;
     }
-    .copyright {
-       bottom: 1.5rem;    
+    .copyright {    
       font-size: 0.6rem;
    }
    .progress-container {
@@ -319,8 +317,7 @@
          margin-top:20px;
          font-size: 2.5rem;
      }
-     .copyright {
-        bottom: 1.5rem;    
+     .copyright {  
        font-size: 0.6rem;
     }
 
