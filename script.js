@@ -10,6 +10,9 @@ const cover = document.querySelector("#cover");
 const songTrivia = document.querySelector("#song-trivia");
 const singer = document.querySelector("#singer");
 const headName = document.querySelector('.appName');
+const songDuration = document.querySelector('.songDuration');
+const songTime = document.querySelector('.songTime');
+
 
 // Song Titles
 const songs = [
@@ -62,7 +65,11 @@ function loadSong(song) {
   cover.src = `images/${song}.jpg`;
   songTrivia.innerText = trivia[songIndex];
   singer.innerText = singers[songIndex];
+  audio.onloadedmetadata = function() {
+    songTime.innerText = Math.floor(Math.floor(audio.duration)/60)+":"+Math.floor(audio.duration)%60;
+  };
 }
+
 
 function playSong() {
   musicCard.classList.add("play");
@@ -104,13 +111,15 @@ function updateProgress(e) {
   const { duration, currentTime } = e.srcElement;
   const progressPercent = (currentTime / duration) * 100;
   progress.style.width = `${progressPercent}%`;
+  songDuration.innerText =Math.floor(Math.floor(currentTime)/60)+":" + Math.floor(currentTime)%60;
+ 
 }
 
 function setProgress(e) {
   const width = this.clientWidth;
   const clickX = e.offsetX;
   const duration = audio.duration;
-
+ 
   audio.currentTime = (clickX / width) * duration;
 }
 
